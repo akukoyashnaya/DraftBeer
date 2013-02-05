@@ -22,6 +22,7 @@
 	<!-- CSS
   ================================================== -->
  <link rel="stylesheet" href="stylesheets/base.css">
+ <link rel="stylesheet" href="stylesheets/form.css">
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
    <link rel="stylesheet" href="stylesheets/layout.css">
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
@@ -95,12 +96,9 @@ $('#placeholder').html(cont);
 
 
 
-<div class=" content container">
-
-<div class="container" id="placeholder">
+<div class=" content container" id="placeholder">
 
 
-</div>
 
 </div>
 
@@ -160,10 +158,10 @@ $('#placeholder').html(cont);
 ================================================== -->
 
 <!-- product content -->
-<script type='text/html' id="content_product">
+<!-- <script type='text/html' id="content_product">
 <h2>product name</h2>
 <p> content....</p>
-</script>
+</script> -->
 <!-- end product content -->
 
 <!-- index content -->
@@ -225,6 +223,140 @@ $('#placeholder').html(cont);
  </div>
  </script>
  <!-- end index content -->
+
+
+
+
+<!-- product content -->
+<script type='text/html' id="content_admin_places">
+	<div class="container content form-page" >
+  
+  <div>
+	<h4 class="fbname">Anna Kukoyashnaya</h4>
+	<a href="#" class="logout" >Logout</a><br /><br / >
+	</div>
+	
+	<!-- <div class="form-summary">
+	<p>There are no Places associated with your Account.<br />
+	Fill out this form in order to add New Place and Beer Brands.</p>
+	</div>  -->
+	
+	<div class="places">
+	<ul> 
+		<li><a href="#">Place 1 - Tel-Aviv, Neviim st., 10</a></li>
+		<li><a href="#">Place 2 - Tel-Aviv, Neviim st., 10</a></li>
+		<li><a href="#">Place 3 - Tel-Aviv, Neviim st., 10</a></li>
+	</ul> 
+	</div> 
+
+
+	<div class="form-content">
+<form id="signup_form" action="#" method="post">	
+    <label for="name">Name of the Place:</label>
+    <input type="text" name="name" id="name" value="" tabindex="1">
+    
+    <label for="position">Position: <br /><small>or your relation to the Place</small></label>
+    <input type="text" name="position" id="position" value="" tabindex="1">
+   
+	 
+	 <label for="type">Type of the Place:</label> 
+    <input type="radio" name="type" id="bar" tabindex="1" value="bar"><span class="radio-style">Bar</span>
+   	<input type="radio" name="type" id="cafe" tabindex="2" value="cafe"><span class="radio-style">Cafe </span> 
+    <input type="radio" name="type" id="restaurant" tabindex="3" value="restaurant"><span class="radio-style">Restautant</span>
+    <input type="radio" name="type" id="other" tabindex="4" value="other"><span class="radio-style">Other</span>
+   
+
+   
+   
+   <h2>Location</h2>
+	 <label for="name">City:</label>
+    <input type="text" name="city" id="city" value="" tabindex="1">
+    
+     <label for="name">Street:</label>
+    <input type="text" name="street" id="street" value="" tabindex="6">
+    
+      <label for="name">House:</label>
+    <input type="text" name="house" id="house" value="" tabindex="7">
+    
+    
+
+
+
+
+		<!--  <label for="continue">Continue</label> -->
+    <input  type="submit" id="continue" value="Continue">
+  </div>
+ </div>
+</form>
+
+</script>
+<!-- end product content -->
+
+<!-- product content -->
+<script type='text/html' id="content_product">
+<div class="four columns product">
+<h4 class="product-header">Beer</h4>
+<a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a>
+</div>
+<div class="three-fourth column">
+<h4 class="product-header">Places</h4>
+<div class="places ">
+	
+	<ul> 
+		<li><a href="#">Place 1 - Tel-Aviv, Neviim st., 10</a></li>
+		<li><a href="#">Place 2 - Tel-Aviv, Neviim st., 10</a></li>
+		<li><a href="#">Place 3 - Tel-Aviv, Neviim st., 10</a></li>
+	</ul> 
+	</div> 
+</div>
+
+</script>
+<!-- end product content -->
+
+<script type='text/html' id="content_place">
+<div class="form-page">
+<h4 class="product-header">Place 1 - Tel-Aviv, Neviim st., 10</h4>
+</div>
+
+<div class="four  columns"> 
+<a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a>
+ <a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a>
+ <!-- <div class="image"> -->
+ 	<a href=# class="plain"> <img src="images/beers/beck's_200.png" alt="" /></a>
+ <!-- 	</div> -->  	
+ <a href=# class="plain"> <img src="images/beers/gosser_200.png" alt="" /></a>
+ <a href=# class="plain"> <img src="images/beers/heineken_200.png" alt="" /></a>
+ <a href=# class="plain"> <img src="images/beers/estrella_damm_200.png" alt="" /></a>
+ </div>
+  <div class="four  columns">
+ <a href=# class="plain"> <img src="images/beers/stella_artois_200.png" alt="" /></a>
+ <a href=# class="plain"> <img src="images/beers/miller_200.png" alt="" /></a>
+ <a href=# class="plain"> <img src="images/beers/guiness_200.png" alt="" /></a>
+ <a href=#> <img src="images/beers/duvel_200.png" alt="" /></a>
+ <a href=#> <img src="images/beers/affligem_200.png" alt="" /></a>
+ 
+ </div>
+ 
+<div class="four  columns">
+ <a href=# class="plain"> <img src="images/beers/kozel_premium_200.png" alt="" /></a>
+ <a href=# class="plain"> <img src="images/beers/kozel_svetly_200.png" alt="" /></a>
+ <a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a>
+ <a href=#> <img src="images/beers/affligem_200.png" alt="" /></a>
+ <a href=#> <img src="images/beers/affligem_200.png" alt="" /></a>
+ 
+ </div> 
+ 
+<div class="four  columns">
+ <a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a>
+ <a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a>
+ <a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a>
+ <a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a>
+ <a href=#> <img src="images/beers/affligem_200.png" alt="" /></a>
+ 
+ 
+</div>
+
+</script>
  
 </body>
 </html>

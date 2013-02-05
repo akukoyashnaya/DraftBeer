@@ -1,0 +1,158 @@
+
+  h4.fbname{
+  		float: left;
+  		display: block;
+  		width: 300px;
+  		height: 30px;
+  		/*margin-bottom: 10px;
+  		margin-left: 10px;
+  		/*margin-top: 10px;*/} 		
+ 
+  a.logout{
+   	font-family: 'Source Sans Pro', sans-serif;
+		font-size: 1.2em;		
+		font-weight: bold;		
+		color: #3b4f6c;
+		text-decoration: none;
+		float: right;
+		display: inline-block;
+		/*margin-top: 15px;*/
+		margin-right: 550px;
+		width: 30px;
+		height: 30px;
+		} 	
+		
+		a.logout:hover{
+		text-decoration: underline;	}	
+  
+     .places{
+     margin-bottom: 10px;     
+    /* 	margin-left: 10px;*/
+     	margin-top: 5px;
+			/*margin-left: 10px; */	
+			margin-right:20px;  			
+ 			padding: 20px 0  0 20px;
+     	background-color: #ede4c7;
+     	width: 400px;
+    
+     	border: 1px solid #b0afae;
+	  	border-radius:5px;
+	  
+	  }	
+	
+  
+/*	  ul.place-list {
+	  	margin: 0;	
+	  	}
+	 
+	  ul.place-list  li a, ul.place-list li a:hover{
+	  	color #333;
+	  	margin: 0;
+	  	font-size: 1em;
+	  	text-decoration: none;
+	  	}
+	  
+		.place-list ul li a:hover{
+			text-decoration: underline;
+			}	 */
+			
+ .places{
+ 
+ 	}
+ 
+ .places ul{
+ 	}
+ 
+ .places ul li{
+ /*	margin-bottom: 5px;*/}
+ 	
+ .places ul li a{
+ 		text-decoration: none;
+ 		font-size: 1.2em;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;}
+ 		
+ .places ul li a:hover{
+ 		text-decoration: underline;
+ 		font-size: 1.2em;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;}	
+	 
+  #signup_form{
+	  
+  	margin: /* 10px 0 0 10px*/;
+ 
+  	}
+  	
+   #signup_form label, #signup_form label p{
+  float:left; 
+  width:15em; 	
+	margin-top: 0.5em;  
+  line-height:1em;
+  margin-right:0.1em; 
+  /*margin-left:0.1em; */
+  text-align:left;
+  color: #554535;
+  font-size: 1em;
+  font-family: 'Helvetica Neue', sans-serif;
+  }
+	  
+   #signup_form input, 
+ #signup_form select, #signup_form textarea {
+  width:11em; 
+  padding:0;
+  background: #ede4c7;
+  }
+  
+  	
+  #signup_form input[type="text"], #signup_form textarea{
+  	border: 1px solid #b0afae;
+  border-radius:5px;
+  padding: 5px;
+  width: 200px;
+  margin-bottom: 10px;}
+ 
+  #signup_form select{
+  	width: 212px;
+  	height: 25px;}
+  	
+  	#signup_form input[type="submit"]{
+		margin-top: 20px;  		
+  		background: url(../images/button-blue.png) no-repeat;
+  		/*font: 0/0 a;
+		text-shadow: none;
+		color: transparent;*/
+		font-size: 16px;
+		font-weight: lighter;
+		padding-bottom: 5px;		
+		width: 100px;
+		height: 35px;
+		max-height: 35px;}
+	
+		#signup_form input[type="submit"]:hover{
+		margin-top: 20px;  	  		
+		vertical-align: middle;
+  		
+  		background: url(../images/button-blue-hover.png) no-repeat;
+		font-size: 16px;
+		font-weight: lighter;		
+		width: 100px;
+		height: 35px;
+		max-height: 35px;}
+
+	#signup_form input[type="radio"]{
+		width: 10px;
+		color: #554535;
+  font-size: 1em;
+  font-family: 'Helvetica Neue', sans-serif;
+		}
+		
+	#continue{
+		color: #ffffff;}	
+		
+	
+	.radio-style {
+		color: #554535;
+  font-size: 1em;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;}	

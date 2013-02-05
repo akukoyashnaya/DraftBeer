@@ -95,9 +95,9 @@
 
 /* #Links
 ================================================== */
-	a, a:visited { color: #ebe5c5 /* #333 */; text-decoration: underline; outline: 0; }
-	a:hover, a:focus { color: #ffffff; }
-	p a, p a:visited { line-height: inherit; }
+/*	/*a, a:visited { color: #ebe5c5 /* #333 *//*; text-decoration: underline; outline: 0; }*/
+/*	a:hover, a:focus { color: #ffffff; }
+	p a, p a:visited { line-height: inherit; }*/
 
 
 /* #Lists

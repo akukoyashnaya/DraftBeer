@@ -4,8 +4,7 @@
 @font-face {
     font-family: 'Krungthep';
     src: url('../fonts/Krungthep/Krungthep.ttf')   /*  format('truetype')*/;
-   /* font-weight: normal;
-    font-style: normal; */
+  
   }
 	
 	
@@ -19,12 +18,16 @@
 		font-size: 30px;
 		font-family: 'Source Sans Pro', sans-serif;
 		color: #DF9731;
-		margin-bottom: 0;}
+		margin-bottom: 0;
+		font-weight: 600;}
 	
 	h2{
-		font-size: 22px;
+		font-size: 18px;
 		font-family: 'Source Sans Pro', sans-serif;
-		color: #ffffff;
+		color: #554535;
+		font-weight: bold;
+		line-height: 40px;
+		margin-bottom: 5px;
 		}
 		
 		h3{
@@ -34,28 +37,26 @@
 		}
 		
 		h4{
-		font-size: 14px;
+		font-size: 30px;
 		font-family: 'Source Sans Pro', sans-serif;
-		color: #ebe5c5;
+		color: #3b4f6c;
+		font-weight: 600;
+		line-height: 
 		}
 
 	p, label{
 		font-family: 'Helvetica Neue', sans-serif;	
 		font-size: 14px;
-		color: #ebe5c5;}
+		color: #554535;}
 	
-	a{
-
+	a, a:hover{
 		font-family: 'Krungthep';		
-		color: #ebe5c5;}
+		color: #554535;}
 		
 	
 	.wrap-header{
-		/*background: url(../images/header1.png) repeat-y;*/
-		/*background: url(../images/footer.png);*/
 		background-color: #261E18;
 		width: 100%;
-		/*padding: 500px 0 0 0;*/
 		color: #ffffff;
 		}
 		
@@ -69,47 +70,41 @@
 		font-size: 1.5em;
 		text-decoration: none;
 		font-weight: 400;
+		}
 		
-		/*background: url(../images/logo.png) no-repeat;*/
-		
-		/*image replacement technique*/
-	/*	font: 0/0 a;
-		text-shadow: none;
-		color: transparent; */}
-		
-		.signup, .login{
-			width: 100px;
-			display: inline;
-			float: right;}
+	.signup, .login{
+		width: 100px;
+		display: inline;
+		float: right;
+		}
 					
-		.signup a, .login a {
-			/*display: inline;*/
-			float: right;
-			width: 100px;
-			height: 38px;
-			font: 0/0 a;
-			text-shadow: none;
-			color: transparent;
- 			}
+	.signup a, .login a {
+	   float: right;
+		width: 100px;
+		height: 38px;
+		font: 0/0 a;
+   	text-shadow: none;
+		color: transparent;
+ 		}
 		 
-		 .signup a {
-		 	background: url(../images/signup.png)no-repeat ;
-		 		margin: 13px 18px 0 0;}
-		 .login a {
-		 	background: url(../images/login.png)no-repeat ;
-		 		margin: 13px 30px 0 0;}
+	.signup a {
+		background: url(../images/signup.png)no-repeat ;
+		margin: 13px 18px 0 0;}
+	.login a {
+		background: url(../images/login.png)no-repeat ;
+		margin: 13px 30px 0 0;}
 
-.signup a:hover {
-		 	background: url(../images/signup_hover.png)no-repeat ;
-		 		margin: 13px 18px 0 0;}
-		 .login a:hover {
-		 	background: url(../images/login_hover.png)no-repeat ;
-		 		margin: 13px 30px 0 0;}
+   .signup a:hover {
+		background: url(../images/signup_hover.png)no-repeat ;
+		margin: 13px 18px 0 0;}
+	.login a:hover {
+		background: url(../images/login_hover.png)no-repeat ;
+		margin: 13px 30px 0 0;}
 
 
-.menu{
-	background: url(../images/menu.png) no-repeat;
-	}	
+   .menu{
+	   background: url(../images/menu.png) no-repeat;
+	   }	
 	 	
 	nav.primary{
 		display: inline;		
@@ -117,52 +112,50 @@
 		height: 40px;
 		padding-top: 10px;
 		}
+	
 	nav.primary ul{
 		float: none;
 		width: 450px;		
-
-		margin-left: 30px;}
+		margin-left: 30px;
+		}
 	
 	nav.primary ul li{
 		float: left;
 		margin-top:12px;
-		margin-left: 20px;}	
+		margin-left: 20px;
+		}	
+
 	nav.primary ul li a{
 		display: inline-block;
 		padding-right: 20px;
-		/*font-family:  'Source Sans Pro', sans-serif;*/
 		font-size: 1.3em;
 		font-weight: 600;
 		color: #ede4c7;
-		text-decoration: none;}	
+		text-decoration: none;
+		}	
 		
-			nav.primary ul li a:hover{
+	nav.primary ul li a:hover{
 		color:#AE1215;
-		text-decoration: none;}
+		text-decoration: none;
+		}
 		
-	
-
-	
-.menu-search{
-	margin-top:5px;
-	 border: 2px solid #ede4c7; 
-   border-radius:10px;
-	 width: 304px; 
-   float:right;
-   margin-right:50px;
-   height: 25px;
-   display: inline-block;
-   }
+	.menu-search{
+		margin-top:5px;
+	 	border: 2px solid #ede4c7; 
+   	border-radius:10px;
+	 	width: 304px; 
+  	  float:right;
+  	  margin-right:50px;
+   	height: 25px;
+   	display: inline-block;   
+     }
    
-    .menu-search form {
-height:30px;
-
+   .menu-search form {
+     height:30px;
     	}
     	
 
-
-
-input[type="search"] {
+	input[type="search"] {
 border:none;
 margin-top:-50px;
     outline: none; 
@@ -172,7 +165,7 @@ margin-top:-50px;
     background-color:transparent;
    }
  
-input[type="submit"], input[type="submit"]:hover {
+	input[type="submit"], input[type="submit"]:hover {
 
    /* width: 20px;
     height: 20px; */
@@ -182,14 +175,10 @@ input[type="submit"], input[type="submit"]:hover {
     margin-top: 2px;
     } 
 
-.one-third h2  {
+	h2.one-third   {
 		padding-left:45px;
 		margin-top: 50px;
 	}
-
-
-
-	
 	
 	a.plain img{
     border: 2px solid #cec8c1;
@@ -206,26 +195,6 @@ input[type="submit"], input[type="submit"]:hover {
 	
 	a.more:hover{
 		background: #b54646;}	
-
-
-
- .recent-projects{
-		margin-top:  50px;}
-		
-		 
-	
-	.recent-projects ul{
-		float: right;
-		margin-top: 7px;}
-	
-	.recent-projects ul li{
-		float: left;
-	/*	margin-left: 20px;   */
-	}	
-	.recent-projects ul li a{
-		display: inline-block;
-		padding-right: 15px;
-		}	
 		
 	footer {
 		/*background: url(../images/footer.png)*/;
@@ -274,78 +243,33 @@ input[type="submit"], input[type="submit"]:hover {
 		margin-top: 15px;} 
 		
 	.beer-details{
-		margin: 20px 10px;}
+		/*margin: 20px 10px;*/}
   
-   .place-list ul li{
-   	margin: 20px;}
-   	.place-list ul li a{
+  /* .place-list ul li{} */
+   /*	margin: 20px;}
+   .place-list ul li a{
    		font-size: 1.2em;
-   		text-decoration: none; }
-   		
-	.four.columns{
-		margin:  20px 0 20px 20px; }
-		   		
-   		.content{
+   		text-decoration: none; 
+   		font-family: 'Helvetica Neue', sans-serif;}
+   */		
+	
+/*	----------------------*/
+	.content{
    			background: url(../images/background_light.png)   ;
    			width: 960px;
    			}
-   		
-  
-  #signup_form{
-  	margin: 10px 0 0 10px;
-  background: url(../images/background_light.png)   ;
-  	}
-  	
-   #signup_form label, #signup_form label p{
-   	float:left; 
-  width:15em; 
-	margin-top: 0.5em;  
-  line-height:1em;
-  margin-right:0.1em; 
-  margin-left:0.1em; 
-  text-align:left;
-  color: #554535;
-  font-size: 1em;
-  font-family: 'Helvetica Neue', sans-serif;
-  }
-	  
-  #signup_form input, #signup_form select, #signup_form textarea {
- /* margin:0 0 0.5em 0.2em;*/
-  width:11em; 
-  padding:0;
-  /* input, select, textarea */
-  background: #ede4c7;
-   /*-webkit-appearance: none;*/
-  }
-  
-  	
-  #signup_form input[type="text"], #signup_form textarea{
-  	border: 1px solid #b0afae;
-  border-radius:5px;
-  padding: 5px;
-  width: 200px;
-  margin-bottom: 10px;}
- 
-  #signup_form select{
-  	width: 212px;
-  	height: 25px;}
-  	
-  	#signup_form input[type="submit"]{
-		margin-top: 20px;  		
-  		background: url(../images/submit.png) no-repeat;
-  		font: 0/0 a;
-		text-shadow: none;
-		color: transparent;
-		width: 100px;
-		height: 40px;
-		max-height: 45px;}:hover
+   .container{}
 	
-		#signup_form input[type="submit"]:hover{
-		margin-top: 20px;  	  		
-  		background: url(../images/submit_hover.png) no-repeat;
-  		font: 0/0 a;
-		text-shadow: none;
-		color: transparent;
-		width: 100px;
-		height: 40px;
-		max-height: 45px;}
+	.form-page{
+		margin: 20px 0 10px 20px;
+		padding-top: 20px;}
+		
+		.four.columns, .three-fourth.column{
+		 margin:  20px 0 20px 17px; }
+		   		}
+	
+	/* ---------product-page----*/
+	 
+	 h1.product-header{
+	 	margin-top: 10px;}	   		
+   	
