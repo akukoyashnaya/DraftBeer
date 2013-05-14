@@ -6,8 +6,7 @@
     src: url('../fonts/Krungthep/Krungthep.ttf')   /*  format('truetype')*/;
   
   }
-	
-	
+		
 	body{
 		margin-top: 0; 
 		/*background: url(../images/dark_wall.png);*/
@@ -30,28 +29,39 @@
 		margin-bottom: 5px;
 		}
 		
-		h3{
+	h3{
 		font-size: 22px;
 		font-family: 'Source Sans Pro', sans-serif;
 		color: #ffffff;
 		}
 		
-		h4{
+	h4{
 		font-size: 30px;
 		font-family: 'Source Sans Pro', sans-serif;
 		color: #3b4f6c;
 		font-weight: 600;
-		line-height: 
 		}
 
 	p, label{
 		font-family: 'Helvetica Neue', sans-serif;	
 		font-size: 14px;
-		color: #554535;}
+		font-weight: bold;
+		color: #554535;
+		}
 	
 	a, a:hover{
-		font-family: 'Krungthep';		
-		color: #554535;}
+			
+		color: #554535;
+		font-weight: 600;}
+
+	.small{
+     	 	color:#554535;
+			display:inline-block;
+			font-size:12px;
+			font-weight:600;
+			text-align:left;
+			width:200px;
+     	 }
 		
 	
 	.wrap-header{
@@ -60,7 +70,7 @@
 		color: #ffffff;
 		}
 		
-	h1.logo a{
+	h1.logo a {
 		display: block;
 		width: 350px;
 		height: 50px;
@@ -71,39 +81,72 @@
 		text-decoration: none;
 		font-weight: 400;
 		}
+	/*css typography*/
+	h4.name {
+	 	margin-top: 10px;
+	 /*	margin-left: 10px;*/
+	 	width: auto;
+	 	color: /*#32574F*/ #3b4f6c;
+	 	display: inline;
+	 	float: left;
+	 	}
+	 	.address, .address p  {
+	 /*	margin-left: 10px;*/
+	 	color: #3b4f6c;
+	 	display: block;
+	 	/*display: inline-block;*/
+		/*float: left;*/
+		font-size: 18px;
 		
-	.signup, .login{
-		width: 100px;
-		display: inline;
-		float: right;
-		}
-					
-	.signup a, .login a {
+		font-weight:600;
+		/*text-align:left;*/
+		width:auto;	
+	 }
+	 .web-address a, .web-address p  {
+	 /*	margin-left: 10px;*/
+	 	color: #e1992d;
+	 	display: block;
+	 	/*display: inline-block;*/
+		/*float: left;*/
+		font-size: 16px;
+		font-weight:600;
+		/*text-align:left;*/
+		width:auto;
+		t	
+	 }
+	 .info, .info p  {
+	 /*	margin-left: 10px;*/
+	 	color: #32574f;
+	 	display: block;
+	 	/*display: inline-block;*/
+		/*float: left;*/
+		font-size: 14px;
+		
+		font-weight:600;
+		/*text-align:left;*/
+		width:auto;	
+	 }
+	
+	/*facebook-login*/				
+	 .login a {
 	   float: right;
-		width: 100px;
+		width: 200px;
 		height: 38px;
 		font: 0/0 a;
-   	text-shadow: none;
+   		text-shadow: none;
 		color: transparent;
  		}
 		 
-	.signup a {
-		background: url(../images/signup.png)no-repeat ;
-		margin: 13px 18px 0 0;}
 	.login a {
-		background: url(../images/login.png)no-repeat ;
-		margin: 13px 30px 0 0;}
+		background: url(../images/facebook-login.png)no-repeat ;
+		margin: 15px 0 0 0;}
 
-   .signup a:hover {
-		background: url(../images/signup_hover.png)no-repeat ;
-		margin: 13px 18px 0 0;}
-	.login a:hover {
-		background: url(../images/login_hover.png)no-repeat ;
-		margin: 13px 30px 0 0;}
-
-
+	/*menu*/
    .menu{
-	   background: url(../images/menu.png) no-repeat;
+	  background: url(../images/menu-ribbon-left.png) left no-repeat;
+	  background: url(../images/menu-ribbon.png) repeat-x;
+	    
+	    /*background: url(../images/menu.png) no-repeat;*/
 	   }	
 	 	
 	nav.primary{
@@ -127,11 +170,12 @@
 
 	nav.primary ul li a{
 		display: inline-block;
-		padding-right: 20px;
+		padding-right: 2px;
 		font-size: 1.3em;
 		font-weight: 600;
 		color: #ede4c7;
 		text-decoration: none;
+		font-family: 'Krungthep';	
 		}	
 		
 	nav.primary ul li a:hover{
@@ -142,79 +186,86 @@
 	.menu-search{
 		margin-top:5px;
 	 	border: 2px solid #ede4c7; 
-   	border-radius:10px;
+   		border-radius:10px;
 	 	width: 304px; 
-  	  float:right;
-  	  margin-right:50px;
-   	height: 25px;
-   	display: inline-block;   
-     }
+  		float:right;
+  	    margin-right:50px;
+   		height: 25px;
+   		display: inline-block;   
+     	}
    
    .menu-search form {
-     height:30px;
+        height:30px;
     	}
     	
-
-	input[type="search"] {
-border:none;
-margin-top:-50px;
-    outline: none; 
-    -webkit-appearance: none; 
-    width: 274px; 
-    vertical-align: middle; 
-    background-color:transparent;
-   }
+	.menu-search input[type="search"] {
+		border:none;
+		margin-top:-15px;
+    	outline: none; 
+    	-webkit-appearance: none; 
+    	width: 274px; 
+    	vertical-align: middle; 
+    	background-color:transparent;
+    	color: #ede4c7;
+    	font-size: 14px;
+   		}
  
-	input[type="submit"], input[type="submit"]:hover {
+	.menu-search input[type="submit"], .menu-search input[type="submit"]:hover {
+   		/* width: 20px;
+    	height: 20px; */
+    	max-height:20px;
+    	background: url(../images/search.png) no-repeat 50% 50%;
+    	border: none;
+    	margin-top: 2px;
+    	} 
 
-   /* width: 20px;
-    height: 20px; */
-    max-height:20px;
-    background: url(../images/search.png) no-repeat 50% 50%;
-    border: none;
-    margin-top: 2px;
-    } 
-
-	h2.one-third   {
+	/*h2.one-third   {
 		padding-left:45px;
 		margin-top: 50px;
-	}
+		}*/
 	
+	/*image-frame homepage*/
 	a.plain img{
-    border: 2px solid #cec8c1;
-    padding: 5px;
-    width: 200px;
-    background-color: #EFEECB;
-    }
+    	border: 2px solid #cec8c1;
+    	padding: 5px;
+    	width: 200px;
+    	background-color: #EFEECB;
+    	}
     
     a.plain:hover img{
-  	 border: 2px solid #e1992d;
-    /*padding: 5px 0 0 5px;*/
-    /*width: 205px;*/
-    background-color: #F9EBD4; 	}
+  	 	border: 2px solid #e1992d /*#32574F*/;
+    	/*padding: 5px 0 0 5px;*/
+    	/*width: 205px;*/
+    	background-color: #F9EBD4; 	
+    	}
 	
 	a.more:hover{
-		background: #b54646;}	
+		background: #b54646;
+		}	
 		
 	footer {
 		/*background: url(../images/footer.png)*/;
-		background-color: #32574F /*#554535*/;}
+		background-color: #32574F /*#554535*/;
+		}
 	
 	footer h3{
 		margin-top: 50px;		
-		font-size: 18px;}		
+		font-size: 18px;	
+		}		
 
 	.tweets p, .news p, .contact p {
 		font-family:  'Source Sans Pro', sans-serif;
 		font-size: 13px;
-		margin-bottom:  5px;}
+		margin-bottom:  5px;
+		}
 		
     .tweets small, .news  small, .contact  small {    	
     	color: #339999;
     	/*padding-left:45px;*/
 		/*margin-top: 500px;*/
 		margin-bottom: 10px;
-		margin-bottom: 10px;}		 
+		margin-bottom: 10px;
+		}		 
 	
 	.tweets ul li, .news li{
 		margin: 0;
@@ -234,13 +285,14 @@ margin-top:-50px;
 		border-radius: 3px;		
 		text-decoration: none;
 		color: #ffffff;
-		text-shadow: 0 -1px 0 #539544;}
-	a.footer-button:hover{
-		background: #262626;}	
+		text-shadow: 0 -1px 0 #539544;
+		}
 	
-	.content{
-		margin-bottom: 20px;
-		margin-top: 15px;} 
+	a.footer-button:hover{
+		background: #262626;
+		}	
+	
+	
 		
 	.beer-details{
 		/*margin: 20px 10px;*/}
@@ -253,23 +305,423 @@ margin-top:-50px;
    		font-family: 'Helvetica Neue', sans-serif;}
    */		
 	
-/*	----------------------*/
-	.content{
-   			background: url(../images/background_light.png)   ;
-   			width: 960px;
-   			}
-   .container{}
+/*	----columns - offsets------------------*/
 	
-	.form-page{
-		margin: 20px 0 10px 20px;
-		padding-top: 20px;}
+   .content{
+		margin-bottom: 20px;
+		margin-top: 15px;
+		background: url(../images/background_light.png) } 
+    
+    .container{}
 		
-		.four.columns, .three-fourth.column{
-		 margin:  20px 0 20px 17px; }
-		   		}
+	.four.columns{
+     	margin:  20px 0 20px 17px; 
+     	}
+   	.two-thirds.column.left, .one-third.column.left  {
+   		margin-left: 20px;
+   		margin-right: 0;
+   	}
+   	.sixteen.columns{
+   		margin-left: 20px;
+   	}	
+   	.two.columns.left{
+   		margin-left: 0;
+   	}
 	
 	/* ---------product-page----*/
 	 
-	 h1.product-header{
-	 	margin-top: 10px;}	   		
+	.product-header ul{	
+		float: left;
+	}
+	.product-header ul li{
+		float: left;
+	}
+	 
+	 .two.columns:first-child{
+		margin-left: 0;
+		border 1px solid red;
+	}
+
+	.two-thirds.column{margin-left: 10px;}
+
+	 /*--------beer-brands---*/
+	 
+	 .beer-brands{
+	 
+	 }	
+	 .beer-brands ul{
+	 	list-style-type: none;	
+	 }
+	 .beer-brands ul li{
+	 	float: left;
+	 	
+	 	background: red;
+	 	paddding-top: 20px;
+	 	border-radius: 3px;
+	 	line-height: 2em;
+	 	overflow: hidden;
+	 
+	 }	
+	 
+	 .beer-brands ul li a{
+	 	padding: 20px;
+
+	
+	 }	   		
+    /*------------*/
+    .brands-selectable{
+
+    }
+    .brands-selected,  .beer-places   {
+    	
+    	vertical-align: middle; 
+    	padding: 0;
+    	margin: 0;
+    	
+   		}	
+
+
+	.brands-selected ul{
+		margin-left: 0;
+	} 
    	
+    .brands-selected ul li{
+    	margin: 0 10px 5px 0;
+    	padding: 0;
+    	border: 2px solid #32574F;
+    	border-radius: 3px;
+
+    }
+
+    .beer-places ul li{
+    	margin: 0 10px 5px 0;
+    	padding: 0;
+    	border: 2px solid #261E18;
+    	border-radius: 3px;
+    	min-height: 45px;
+    	vertical-align: middle;
+    	/*width: 280px;*/
+
+    }
+	
+	.brands-selected ul li:first-child, .beer-places ul li:first-child{
+    	margin-top: 11px;
+    }
+	.brands-selected ul li:hover, .beer-places ul li:hover{
+    	
+    	border: 2px solid #a62812;
+    	border-radius: 3px;
+    }
+	.brands-selected ul li a{
+		margin: 0;
+		padding:10px 0 0 10px;
+    	display: block;	
+    	min-width: 150px;
+    	width: 230px;
+    	float: left;
+    	color: #32574F;
+    	text-decoration: none;
+    	
+    }
+
+
+
+ .beer-places ul li a{
+		margin: 0;
+		padding:5px 0 0 10px;
+    	display: block;	
+    	min-width: 150px;
+    	width: 230px;
+    	float: left;
+    	color: #261E18;
+    	text-decoration: none;
+    	font-size: 1.2em;
+    	
+    }
+
+    .beer-places ul li
+    {padding-top: 0;}
+
+    .brands-selected ul li a:hover{
+		
+    	color: #a62812;
+    	
+    }
+	
+	.brands-selected input[type="submit"] .brands-selected input[type="submit"]:hover {
+		padding: 0;
+    	margin: 0;
+   		display: inline-block;
+   		float: right;
+    	} 
+
+    .brands-selectable{
+    margin-top: 10px;	 
+    }
+
+
+	.brands-selectable-panel{
+	/*margin-left: 10px;*/
+	margin-right: 25px;
+	margin-top: 10px;
+	}
+
+	.brands-selected-panel{
+	 	margin-right: 10px;
+	 	margin-top: 10px;	}
+
+    .brands-selectable-panel, .brands-selected-panel{
+    	height: 40px;
+    	border: 2px solid #32574F;
+    	border-radius: 3px;
+    	background: #32574F; 
+    }
+    .brands-selectable-panel p, .brands-selected-panel p {
+     font-size: 1.2em;
+     color:  #ede4c7;
+     float: left;
+     display: block;	
+     line-height: 1.4em;
+     margin-top: 7px;
+     padding-left: 10px; 
+    }
+    .brands-selected-panel p{
+
+    }
+
+    .brands-selectable-search{
+	
+	 	border: 2px solid #ede4c7; 
+   		border-radius:10px;
+	 	width: 304px; 
+  		float:right;
+  	   	margin-top: 5px;
+  	   	margin-right:10px;
+   		height: 25px;
+   		display: inline-block;   
+     	}
+   
+   .brands-selectable-search form {
+        height:30px;
+    	}
+    	
+	.brands-selectable-search input[type="search"] {
+		border:none;
+		margin-top:-15px;
+    	outline: none; 
+    	-webkit-appearance: none; 
+    	width: 274px; 
+    	vertical-align: middle; 
+    	background-color:transparent;
+    	color: #ede4c7;
+    	font-size: 14px;
+   		}
+ 
+	.brands-selectable-search input[type="submit"], .brands-selectable-search input[type="submit"]:hover {
+   		/* width: 20px;
+    	height: 20px; */
+    	max-height:20px;
+    	background: url(../images/search.png) no-repeat 50% 50%;
+    	border: none;
+    	margin-top: 2px;
+    	} 
+    
+    .brands-selected input[type="submit"], .beer-places input[type="submit"], .brands-selected input[type="submit"]:hover
+    	{
+    	margin-top: 6px;
+    	margin-right: 10px;	
+    	width: 25px;
+    	border: none;
+
+    	}
+
+    .brands-selected input[type="submit"], .beer-places input[type="submit"] {
+    	background: url(../images/delete.png) no-repeat;
+    	}
+
+    	.brands-selected input[type="submit"]:hover, .beer-places input[type="submit"]:hover{
+    		background: url(../images/delete-hover.png) no-repeat;
+    	}
+    	
+    .brands-selected-clear-all input[type="submit"], .brands-selected-clear-all input[type="submit"]:hover{
+    	float: right;
+    	display: inline-block;
+    	margin-right: 14px;
+    	margin-top: 4px;
+    	border: none;
+    	color: #ede4c7;
+    	font-size: 16px;
+    	font-style: lighter;
+    	text-shadow: none;
+    	font-weight: lighter;
+    }
+
+     	.brands-selected-clear-all input[type="submit"]
+     	 {
+     	 background: url(../images/button-red.png) no-repeat;	
+     	 }
+     	 .brands-selected-clear-all input[type="submit"]:hover{
+     	  background: url(../images/button-red-hover.png) no-repeat;	
+     	 }
+
+     	  
+        .beer-places-panel{
+	 	margin-right: 10px;	}
+
+    .beer-places-panel {
+    	height: 40px;
+    	border: 2px solid #32574F;
+    	border-radius: 3px;
+    	background: #32574F; 
+    }
+    .beer-places-panel p{
+     font-size: 1.2em;
+     color:  #ede4c7;
+     float: left;
+     display: block;	
+     line-height: 1.4em;
+     margin-top: 7px;
+     padding-left: 10px; 
+    }
+
+    
+ 
+
+.header-name{
+	display: block;
+	float: left;
+	width: 960px;
+}
+
+.place-list ul{
+	margin-top: 0;
+
+}
+.place-list ul li:first-child{
+margin-top:0; 
+}
+.place-list ul li a{
+text-decoration: none;
+color: #3b4f6c;
+font-size: 1em;
+}
+
+ 
+
+      .address
+      {
+        font-size: 1em;
+      }
+    
+     
+		.pick{
+			display: block;
+			float: left;
+			border-collapse: collapse;
+		}
+		a.pick-icon1 {	
+		font: 0/0 a;
+		text-shadow: none;
+		color: transparent;
+		background: url("../images/pick-icon.png") no-repeat;
+		width: 28px;
+      	height: 28px;
+      	display: inline-block;
+      	position: absolute;
+      	}
+      	a.pick-icon2 {	
+		font: 0/0 a;
+		text-shadow: none;
+		color: transparent;
+		background: url("../images/edit-icon2.png") no-repeat;
+		width: 28px;
+      	height: 28px;
+      	display: 	inline-block;
+      	position: absolute;
+      	margin-left: 10px;
+      	margin-top: -6px;
+		}
+
+		a.pick-icon2:hover{
+			background: url("../images/edit-icon2-hover.png") no-repeat;
+		}	
+
+
+      	a.pick-icon3 {	
+		font: 0/0 a;
+		text-shadow: none;
+		color: transparent;
+		background: url("../images/edit-brands-icons.png") no-repeat;
+		width: 28px;
+      	height: 28px;
+      	display: inline-block;
+      	position: absolute;
+      	margin-left: 45px;
+      	margin-top: -6px;
+      	}
+
+      	a.pick-icon3:hover{
+			background: url("../images/edit-brands-icons-hover.png") no-repeat;
+		}	
+
+
+      	a.pick-icon1:hover{
+    		background: url("../images/pick-icon-hover.png") no-repeat;
+  		
+      	}
+		.place-details{
+			
+			margin-left: 30px;
+			margin-top: 10px;
+			display: block;
+			
+		}
+		.place-details::after{
+			display: block;
+			visibility: hidden;
+			clear: both;
+			height: 0;
+			content: "."
+
+		}
+		.name1, .name1 a{
+			font-size: 22px;
+			display: inline;
+			margin-bottom: 0.1em;
+			font-weight: 600;
+			color: #3b4f6c;
+			font-family: 'Source Sans Pro', sans-serif;
+			text-decoration: none;
+			}
+
+		.name1 a:hover{
+			text-decoration: underline;
+		}
+		.edit{
+			display: inline;
+		}
+		a.edit img{
+			background: url("../images/edit-icon2");
+		}
+
+		p.tags{
+			line-height: 1.8;
+			margin-bottom: 5px;
+		}
+
+		p.tags a {
+			text-decoration: none;
+			margin-right: 3px;
+			color: #554535;
+			border: 1px solid #e1992d;
+			border-radius: 3px;
+			padding: 1px 2px;
+			background: #e1992d;
+		}
+		p.tags a:hover{
+			background: #F9A022;
+			color: #261у18;
+		}
+
+		
+		

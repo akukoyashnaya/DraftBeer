@@ -18,13 +18,16 @@
 
 <script type='text/javascript' src="js/jquery-1.9.0.js"></script>
 <script type='text/javascript' src="js/underscore.js"></script>
+<script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 
 	<!-- CSS
   ================================================== -->
- <link rel="stylesheet" href="stylesheets/base.css">
- <link rel="stylesheet" href="stylesheets/form.css">
+ 	
+ 	<link rel="stylesheet" href="stylesheets/base.css">
+ 	<link rel="stylesheet" href="stylesheets/checkbox.css">
+ 	<link rel="stylesheet" href="stylesheets/form.css">
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
-   <link rel="stylesheet" href="stylesheets/layout.css">
+   	<link rel="stylesheet" href="stylesheets/layout.css">
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
@@ -47,6 +50,11 @@ var cont = $('#content_'+p).html();
 $('#placeholder').html(cont);
 });
 </script>
+<script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
 
 
 	<!-- Primary Page Layout
@@ -58,9 +66,7 @@ $('#placeholder').html(cont);
 	<!-- logo -->
 <h1 class="logo"><a title="Portfolio" href="#">DRAFT BEER</a></h1>
 
- <div  class="signup">
- <a href="#"> Sign Up </a> 
-</div>
+ 
 
 <div  class="login">
  <a href="#"> Login </a> 
@@ -76,18 +82,15 @@ $('#placeholder').html(cont);
 		<li><a href="#">BEER</a> </li>
 		<li><a href="#">PLACES</a> </li>
 		<li><a href="#">CONTACT</a></li>
+		<li><a href="#">ACCOUNT</a></li>
 	</ul>
 
 </nav>
-
-
-
 
 <form class="menu-search">
 <input id="search" type="search" name="search">
 <input type="submit" value="">
 </form>
-
 
 </div>
 </nav>
@@ -98,11 +101,7 @@ $('#placeholder').html(cont);
 
 <div class=" content container" id="placeholder">
 
-
-
 </div>
-
-
 
 
 <footer>
@@ -168,28 +167,12 @@ $('#placeholder').html(cont);
 <script type='text/html' id="content_index">
 <div class="four  columns">
 
-
-
- 
 <a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a>
- 
-
-
- <a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a>
- 
- 
- 
- <!-- <div class="image"> -->
-
+<a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a> 
  	<a href=# class="plain"> <img src="images/beers/beck's_200.png" alt="" /></a>
- 	
- <!-- 	</div> -->
- 	
- 	
  <a href=# class="plain"> <img src="images/beers/gosser_200.png" alt="" /></a>
  <a href=# class="plain"> <img src="images/beers/heineken_200.png" alt="" /></a>
  <a href=# class="plain"> <img src="images/beers/estrella_damm_200.png" alt="" /></a>
- 
  </div>
  
  <div class="four  columns">
@@ -217,7 +200,6 @@ $('#placeholder').html(cont);
  <a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a>
  <a href=#> <img src="images/beers/affligem_200.png" alt="" /></a>
  
- 
 </div>
  
  </div>
@@ -227,35 +209,47 @@ $('#placeholder').html(cont);
 
 
 
-<!-- product content -->
-<script type='text/html' id="content_admin_places">
-	<div class="container content form-page" >
-  
-  <div>
-	<h4 class="fbname">Anna Kukoyashnaya</h4>
-	<a href="#" class="logout" >Logout</a><br /><br / >
-	</div>
+<!-- admin_places -->
+<script type='text/html' id="content_admin_places_edit">
+	<div class="sixteen columns" >
+ 
+ 	<div>
+		<div class="pick">
+		<div><a class="pick-icon1" href="#">pick</a></div>
+		</div>
 	
+	<div class="place-details">
+	
+		<div class="name1"><a href=#>Place1</a></div>
+			<div>
+			<span class="address">Tel-Aviv, Neviim 9</span>
+			<span class="address">+333 333 333</span>
+			<a class="pick-icon2" href="#" >edit</a>
+			<a class="pick-icon3" href="#" >edit</a>
+	</div>
+	</div>
+	</div>
 	<!-- <div class="form-summary">
 	<p>There are no Places associated with your Account.<br />
 	Fill out this form in order to add New Place and Beer Brands.</p>
 	</div>  -->
 	
-	<div class="places">
+	<!--<div class="places">
 	<ul> 
 		<li><a href="#">Place 1 - Tel-Aviv, Neviim st., 10</a></li>
 		<li><a href="#">Place 2 - Tel-Aviv, Neviim st., 10</a></li>
 		<li><a href="#">Place 3 - Tel-Aviv, Neviim st., 10</a></li>
 	</ul> 
-	</div> 
+	</div> -->
 
-
+   
 	<div class="form-content">
-<form id="signup_form" action="#" method="post">	
-    <label for="name">Name of the Place:</label>
+	
+	<form id="signup_form" action="#" method="post">	
+    <label for="name">Place Name:</label>
     <input type="text" name="name" id="name" value="" tabindex="1">
     
-    <label for="position">Position: <br /><small>or your relation to the Place</small></label>
+    <label for="position">Position: </label>
     <input type="text" name="position" id="position" value="" tabindex="1">
    
 	 
@@ -269,20 +263,21 @@ $('#placeholder').html(cont);
    
    
    <h2>Location</h2>
-	 <label for="name">City:</label>
+	<label for="name">City:</label>
     <input type="text" name="city" id="city" value="" tabindex="1">
     
-     <label for="name">Street:</label>
+    <label for="name">Street:</label>
     <input type="text" name="street" id="street" value="" tabindex="6">
     
-      <label for="name">House:</label>
+    <label for="name">House:</label>
     <input type="text" name="house" id="house" value="" tabindex="7">
     
-    
+    <label for="name">Phone:</label>
+    <input type="text" name="phone" id="phone" value="" tabindex="8">
 
-
-
-
+    <label for="name">Hours:</label>
+    <input type="text" name="hours" id="hourse" value="" tabindex="8">
+   
 		<!--  <label for="continue">Continue</label> -->
     <input  type="submit" id="continue" value="Continue">
   </div>
@@ -292,30 +287,238 @@ $('#placeholder').html(cont);
 </script>
 <!-- end product content -->
 
+<!-- admin-beer -->
+<script type='text/html' id="content_admin_beer">
+	<div class="sixteen columns" >
+	<div>
+		<div class="pick">
+		<div><a class="pick-icon1" href="#">pick</a></div>
+		</div>
+	
+	<div class="place-details">
+	
+		<div class="name1"><a href=#>Place1</a></div>
+			<div>
+			<span class="address">Tel-Aviv, Neviim 9</span>
+			<a class="pick-icon2" href="#" >edit</a>
+			<a class="pick-icon3" href="#" >edit</a>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="two-thirds column left">
+		<p>To add brands to the  Brand List of the Place click  on brand image </p> 
+		<div class="brands-selectable-panel">
+		<p>150  brands totally </p>	
+		
+		<form class="brands-selectable-search">
+		<input id="search" type="search" name="search">
+		<input type="submit" value="">
+		</form>
+		
+	</div>
+
+	<div class="two columns   brands-selectable left">
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a> 
+ 	<a href=# class="plain"> <img src="images/beers/beck's_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/gosser_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/heineken_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/estrella_damm_200.png" style="width:100px;" /></a>
+	</div>
+
+	<div class="two columns   brands-selectable">
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a> 
+ 	<a href=# class="plain"> <img src="images/beers/beck's_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/gosser_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/heineken_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/estrella_damm_200.png" style="width:100px;" /></a>
+	</div>
+	<div class="two columns brands-selectable">
+
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a> 
+ 	<a href=# class="plain"> <img src="images/beers/beck's_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/gosser_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/heineken_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/estrella_damm_200.png" style="width:100px;" /></a>
+ 	</div>
+
+ 	<div class="two columns brands-selectable">
+ 	<a href=# class="plain"> <img src="images/beers/gosser_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/heineken_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/estrella_damm_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+ 	</div>
+
+ 	<div class="two columns brands-selectable">
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a> 
+ 	<a href=# class="plain"> <img src="images/beers/beck's_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/gosser_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/heineken_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/estrella_damm_200.png" style="width:100px;" /></a>
+	</div>
+
+	
+
+	</div> 
+
+
+	<div class="one-third column">
+		<p> Brand List</p>
+		
+
+		<div class="brands-selected-panel">
+		<p>3  brands selected </p>	
+		
+		<form class="brands-selected-clear-all">
+		<input type="submit" value="Clear All">
+		</form>
+		
+		</div>
+
+
+		<form class=" brands-selected">
+		<ul >
+			<li><a href="#">Beer Brand1</a> <input type="submit" value=""></li>
+			<li><a href="#">Beer Brand1</a> <input type="submit" value=""></li>
+			<li><a href="#">Beer Brand1</a> <input type="submit" value=""></li>
+			<li><a href="#">Beer Brand1</a> <input type="submit" value=""></li>
+		</ul>
+		</form>
+	</div> 
+
+
+	
+	
+</script>
+<!-- end admin-beer -->
+
+
 <!-- product content -->
 <script type='text/html' id="content_product">
-<div class="four columns product">
-<h4 class="product-header">Beer</h4>
-<a href=# class="plain"> <img src="images/beers/affligem_200.png" alt="" /></a>
-</div>
-<div class="three-fourth column">
-<h4 class="product-header">Places</h4>
-<div class="places ">
+	<div class="sixteen columns">
+		<h4 class="name">Estrella-super</h4>
+	</div>
+
+	<div class="one-third column left">
+		<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width 110%" alt="" /></a>
 	
-	<ul> 
-		<li><a href="#">Place 1 - Tel-Aviv, Neviim st., 10</a></li>
-		<li><a href="#">Place 2 - Tel-Aviv, Neviim st., 10</a></li>
-		<li><a href="#">Place 3 - Tel-Aviv, Neviim st., 10</a></li>
-	</ul> 
-	</div> 
-</div>
+	<div >
+	<p class="tags">
+	<a href>beer</a>
+	<a href>light</a>
+	<a href>German</a>
+	<a href>ale</a>
+	<a href>8%alcohol</a>
+	<a href>beer-beer</a>
+	<a href>ale-ale</a>
+	<a href>Israel</a>
+	</p>
+
+	</div>
+
+		<form class="beer-places-panel">
+		<p>Sort by ABC | Location </p>
+		
+		</form>
+	
+	<div>
+		<div class="pick">
+		<div><a class="pick-icon1" href="#">pick</a></div>
+		</div>
+	
+	<div class="place-details">
+	
+		<div class="name1"><a href=#>Place1</a></div>
+			<div>
+			<span class="address">Tel-Aviv, Neviim 9</span>
+			<a class="pick-icon2" href="#" >edit</a>
+			<a class="pick-icon3" href="#" >edit</a>
+	</div>
+	</div>
+	</div>
+
+<div>
+		<div class="pick">
+		<div><a class="pick-icon1" href="#">pick</a></div>
+		</div>
+	
+	<div class="place-details">
+	
+		<div class="name1"><a href=#>Place1</a></div>
+			<div>
+			<span class="address">Tel-Aviv, Neviim 9</span>
+			<a class="pick-icon2" href="#" >edit</a>
+			<a class="pick-icon3" href="#" >edit</a>
+	</div>
+	</div>
+	</div>
+
+<div>
+		<div class="pick">
+		<div><a class="pick-icon1" href="#">pick</a></div>
+		</div>
+	
+	<div class="place-details">
+	
+		<div class="name1"><a href=#>Place1</a></div>
+			<div>
+			<span class="address">Tel-Aviv, Neviim 9</span>
+			<a class="pick-icon2" href="#" >edit</a>
+			<a class="pick-icon3" href="#" >edit</a>
+	</div>
+	</div>
+	</div>
+
+<div>
+		<div class="pick">
+		<div><a class="pick-icon1" href="#">pick</a></div>
+		</div>
+	
+	<div class="place-details">
+	
+		<div class="name1"><a href=#>Place1</a></div>
+			<div>
+			<span class="address">Tel-Aviv, Neviim 9 long-long-long-long-long-long</span>
+			<a class="pick-icon2" href="#" >edit</a>
+			<a class="pick-icon3" href="#" >edit</a>
+	</div>
+	</div>
+	</div>
+	
+	
+
+
+	
+
+	</div>
+	
+	<div class="two-thirds column">
+		
+
+		<div class="places ">
+			
+		
+		</div> 
+	</div>
 
 </script>
 <!-- end product content -->
 
 <script type='text/html' id="content_place">
-<div class="form-page">
-<h4 class="product-header">Place 1 - Tel-Aviv, Neviim st., 10</h4>
+<div class="sixteen columns">
+	<a href="#" class="edit-place">Edit Place Details</a>
+		<ul class=" product-header">
+		<li><h4>Place1 </h4></li>
+		<li><p class="address"> Tel-Aviv, Neviim st, 10</p></li>
+		 </ul>
 </div>
 
 <div class="four  columns"> 
@@ -357,6 +560,195 @@ $('#placeholder').html(cont);
 </div>
 
 </script>
+
+<script type='text/html' id="content_admin_places">
+<div class="one-third column">
+	<div>
+		<div class="pick">
+		<div><a class="pick-icon1" href="#">pick</a></div>
+		</div>
+	
+	<div class="place-details">
+	
+		<div class="name1"><a href=#>Place1</a></div>
+			<div>
+			<div class="address">Tel-Aviv, Neviim 9</div>
+			<div class="web-address"> <a href="#">porter.co.il </a></div><br>
+			<div class="address"> Tel. 33 333 333</div> 
+			<div class="address"> Hours 12:00 - 01:00 </div>
+		
+
+			<!--<a class="pick-icon2" href="#" >edit</a>
+			<a class="pick-icon3" href="#" >edit</a>*/-->
+	</div>
+	
+	</div>
+	</div>
+</div>
+
+<div class="two-thirds column  ">
+		 
+	<!--	<div class="brands-selectable-panel">
+		<p>10 brands selected </p>	
+		
+		<form class="brands-selectable-search">
+		<input id="search" type="search" name="search">
+		<input type="submit" value="">
+		</form>
+		</div>-->
+		
+</div>
+	<div>
+	<div class="two columns   brands-selectable" >
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+		
+	</div>
+
+	<div class="two columns   brands-selectable">
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	</div>
+
+	<div class="two columns brands-selectable">
+
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a> 
+ 	<a href=# class="plain"> <img src="images/beers/beck's_200.png" style="width:100px;" /></a>
+ 		
+ 	</div>
+
+ 	<div class="two columns brands-selectable">
+ 	<a href=# class="plain"> <img src="images/beers/gosser_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/heineken_200.png" style="width:100px;" /></a>
+ 	
+ 	</div>
+
+ 	<div class="two columns brands-selectable">
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+
+	</div>
+	</div>
+
+
+
+<div class="one-third column">
+	<div>
+		<div class="pick">
+		<div><a class="pick-icon1" href="#">pick</a></div>
+		</div>
+	
+	<div class="place-details">
+	
+		<div class="name1"><a href=#>Place1</a></div>
+			<div>
+			<span class="address">Tel-Aviv, Neviim 9</span>
+			<a class="pick-icon2" href="#" >edit</a>
+			<a class="pick-icon3" href="#" >edit</a>
+	</div>
+	</div>
+	</div>
+</div>
+
+<div class="two-thirds column" >
+		 
+	<!--	<div class="brands-selectable-panel">
+		<p>10 brands selected </p>	
+		
+		<form class="brands-selectable-search">
+		<input id="search" type="search" name="search">
+		<input type="submit" value="">
+		</form>
+		</div>-->
+		
+</div>
+	
+	<div class="two columns   brands-selectable" >
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+		
+	</div>
+
+	<div class="two columns   brands-selectable">
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	</div>
+
+	<div class="two columns brands-selectable">
+
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a> 
+ 	<a href=# class="plain"> <img src="images/beers/beck's_200.png" style="width:100px;" /></a>
+ 		
+ 	</div>
+
+ 	<div class="two columns brands-selectable">
+ 	<a href=# class="plain"> <img src="images/beers/gosser_200.png" style="width:100px;" /></a>
+ 	<a href=# class="plain"> <img src="images/beers/heineken_200.png" style="width:100px;" /></a>
+ 	
+ 	</div>
+
+ 	<div class="two columns brands-selectable">
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+	<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width:100px;" /></a>
+
+	</div>
+	
+</script>
+
+<script type='text/html' id="content_edit_brand">
  
+ 	<div class="sixteen columns">
+		<h1 class="name1">Create New Brand<br></h1>
+
+
+	
+		<a href=# class="plain"> <img src="images/beers/affligem_200.png" style="width 110%" alt="" /></a>
+		
+
+		<form class="image-edit">
+		<input type="submit" value="Add Image">
+		</form>
+	
+	<div class="form-content">
+	
+	<form id="signup_form" action="#" method="post">	
+    <label for="name"> Brand Name:</label>
+    <input type="text" name="name" id="name" value="" tabindex="1">
+    <label for="tags"> Tags:</label>
+   <!-- <div class="field">* -->
+   <input type="text" name="tags" id="tags" value="" tabindex="1">
+    
+		<!--  <label for="continue">Save</label> -->
+    <input  type="submit" id="continue" value="Continue">
+  
+ 
+</form>
+</div>
+</div>
+</script>
+
+
+<script type='text/html' id="content_contact_form">
+<div class="sixteen columns">
+<h1 class="name1">Contact<br></h1>
+<div class="form-content">
+<form id="signup_form" action="#" method="post">	
+    <label for="username">  Name:</label>
+    <input type="text" name="username" id="username" value="" tabindex="1">
+    <label for="email"> Email:</label>
+   
+   <input type="text" name="email" id="email" value="" tabindex="1">
+    
+    <label for="comment"> Comment:</label>
+    <textarea name="comment" id="comment" value="" tabindex="1"></textarea>
+    
+		<!--  <label for="continue">Submit</label> -->
+    <input  type="submit" id="continue" value="Continue">
+</form>
+</div>
+</div>
+
+
+</script>
 </body>
 </html>
